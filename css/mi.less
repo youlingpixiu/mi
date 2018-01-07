@@ -1,0 +1,1171 @@
+/*通用样式*/
+body{
+  font: 12px  "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei";
+  color:#666;
+  margin:0px;
+  padding:0px;
+}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd {
+  margin:0px;
+  padding:0px;
+  border:none;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  color:#bbb;
+}
+input{border:none;}
+.lf	{float:left;}
+.rf{float:right;}
+.carsel_active{background:#ffffff;}
+/*顶部导航样式*/
+#top{
+  width:100%;
+  min-height:40px;
+  background-color:#333;
+  .top_box{
+    max-width:1226px;
+    margin:0 auto;
+    .lf li,.rf li{
+      float:left;
+      line-height:40px;
+      a:hover{color:#fff;}
+    }
+    ul.lf>li{
+      a{
+        padding: 0 8px;
+        border-right: 1px solid #444;
+      }
+    }
+    ul.lf>li:first-child{a{padding-left:0;}}
+    ul.lf>li:last-child{a{border:none;}}
+    ul.rf>li{a{padding: 0 8px;}}
+    ul.rf>li:first-child{a{border-right: 1px solid #444;}}
+    /*购物车弹出窗口样式*/
+    li.top_shopping{
+      margin-right:0;
+      background:#424242;
+      position: relative;
+      a{
+        display: block;
+        width: 110px;
+        text-align: right;
+        line-height: 40px;
+        i{
+          display: inline-block;
+          width: 22px;
+          height: 18px;
+          margin-right: 5px;
+          vertical-align: -4px;
+          background: url("../image/iconlist_mi.png") no-repeat left -194px bottom -243px;
+        }
+        div.shopping_box{
+          display:none;//需要js控制;
+          width: 274px;
+          height: 96px;
+          text-align: center;
+          position: absolute;
+          top:40px;
+          right:0;
+          z-index: 1000;
+          background: #ffffff;
+          box-shadow: 0 2px 2px 2px rgba(0,0,0, 0.1);
+          img{vertical-align: -33px;}
+        }
+      }
+      a:hover{
+        color: #ff6700;
+        background: #ffffff;
+        i{background-position:left -255px bottom -243px;; }
+      }
+    }
+  }
+}
+/*导航菜单栏样式*/
+nav{
+  position: relative;
+  /*菜单栏样式*/
+  #nav_menue{
+    width:1226px;
+    margin:0 auto;
+    overflow:hidden;
+    .menue_left{
+      float:left;
+      width:234px;
+      a{
+        display:block;
+        line-height:96px;
+        img{vertical-align:middle;}
+      }
+    }
+    /*菜单样式*/
+    .menue_right{
+      margin-left:234px;
+      height: 96px;
+      overflow:visible;
+      ul li{
+        float:left;
+        height: 96px;
+        &:hover{a{color: #ff6700;}}
+        a{
+          display:block;
+          font-weight:bold;
+          padding:37px 15px 0 15px;
+          font-size:16px;
+          color:#333;
+          position: relative;
+          }
+        /*弹出菜单栏样式*/
+        div.nav_menue_box {
+          display: none;//需要js控制显示；
+          width: 100%;
+          height: 230px;
+          position: absolute;
+          top: 96px;
+          left: 0;
+          z-index: 100;
+          background: #ffffff;
+          border-top: 1px solid  #E0E0E0;
+          box-shadow: 0px 2px 1px 1px rgba(0,0,0, 0.1);
+          /*菜单栏样式*/
+          >ul.menue_box{
+            display: none;//需要js控制显示;
+            max-width: 1226px;
+            height: 171px;
+            overflow: visible;
+            margin: 30px  auto;
+            >li{
+              height: 171px;
+              float: left;
+              text-align: center;
+              dl{
+                dt{
+                  border-right:1px solid #E0E0E0;
+                  padding: 0  21px;
+                  margin-bottom: 20px;
+                }
+                a{
+                  padding: 0;
+                  display: block;
+                }
+                dd{margin-bottom:5px;
+                  a{
+                    font-weight: normal;
+                    font-size: 12px;
+                    color: #333;}
+                }
+                dd.menue_box_price{color: #ff6700;}
+              }
+            }
+            li:last-child{dl{dt{border:none;}}}
+          }
+        }
+      }
+      /*右侧搜索框样式*/
+      form{
+        float:right;
+        line-height:96px;
+        position: relative;
+        /*搜索框样式*/
+        input{
+          width: 222px;
+          height:48px;
+          box-sizing: border-box;
+          text-align:left;
+          outline: none;
+          padding: 5px;
+          border:1px solid #eee;
+        }
+        input.search_input{
+          cursor: pointer;
+          width:52px;
+          height: 48px;
+          box-sizing: border-box;
+          border:1px solid  #eee;
+          border-left: none;
+          background:url("../image/iconlist_mi.png") no-repeat left -83px  bottom -91px;
+          &:hover{
+            border-color:#ff6700;
+            background-position: left -10px bottom -91px;
+          }
+        }
+        .input_focus{border:1px solid #ff6700;}
+        }
+      /*搜索框获取焦点后弹出框样式*/
+      .data_list{
+        display: none;
+        position: absolute;
+        top: 71px;
+        right: 162px;
+        z-index:10;
+        width: 220px;
+        border: 1px solid #ff6700;
+        background: #ffffff;
+        >li{
+          >a{
+            display: block;
+            overflow: hidden;
+            padding: 8px 10px;
+            &:hover{background: #FAFAFA;}
+            span.list_left{
+              float: left;
+              color: #424242;
+            }
+            span.list_right{
+              float: right;
+              color: #b0b0b0;
+            }
+          }
+        }
+      }
+      /*搜索热词样式*/
+      .hot_words{
+        float: left;
+        position: absolute;
+        top:0;
+        left:94px;
+        a{
+          color: #757575;
+          padding: 1px 5px;
+          margin:0 2px;
+          background: #eee;
+          transition: all 0.2s linear;
+          &:hover{
+            color: #fff;
+            background: #ff6700;
+          }
+        }
+      }
+    }
+  }
+}
+/*artical--banner样式*/
+#carousel_body {
+  position: relative;
+  width: 1226px;
+  height: 460px;
+  margin: 0 auto;
+}
+/*广告轮播样式*/
+#carousel,#carousel ul，#carousel ul li，#carousel ul li a{
+  display: block;
+  max-width: 100%;
+  height: 460px;
+}
+#carousel ul{
+  li {
+    img {
+      position: absolute;
+      max-width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+/*轮播左右控件样式*/
+#carousel{
+  >a{position: absolute;
+    top: 195px;
+    width: 41px;
+    height:69px;
+    opacity: 1;
+    background: url(../image/iconlist_mi.png) no-repeat;
+  }
+  >a.carousel_prev{
+    left: 234px;
+    background-position: -5px -132px;
+  }
+  >a.carousel_next{
+    right: 0;
+    background-position: -70px  -132px;
+  }
+  &:hover>a.carousel_prev{
+    left: 234px;
+    background-position: -134px -132px;
+  }
+  &:hover>a.carousel_next{
+    right: 0;
+    background-position: -235px -132px;
+  }
+  /*轮播广告页码控件样式*/
+  >ul.carousel_idx{
+    position: absolute;
+    bottom:30px;
+    right:30px;
+    overflow: hidden;
+    li{
+      float: left;
+      height: 6px;
+      width: 6px;
+      margin-right: 10px;
+      border: 2px solid #333333;
+      border-radius: 6px;
+      &:hover{
+        background: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+/*侧边菜单栏样式*/
+/*公共样式*/
+.menue_box_selbuy{
+    display: inline-block;
+    padding: 2px 10px;
+    color: #FF6706;
+    border: 1px solid #FF6706;
+    &:hover{
+      background: #FF6706;
+      color: #ffffff;
+    }
+}
+/*侧边菜单栏样式和弹出二级菜单样式*/
+#aside_banner{
+  >ul{
+  float: left;
+  width: 234px;
+  padding: 20px 0;
+  position: absolute;
+  top:0;
+  left: 0;
+  background: rgba(00,00,00, 0.5);
+  >li:hover {background: #FF6700;}
+  >li{
+    >a{
+      display: block;
+      font-size: 14px;
+      line-height: 42px;
+      padding-left: 30px;
+      color: #ffffff;
+      font-weight: bold;
+      position: relative;
+      >b {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+      }
+    }
+    /*弹出菜单样式*/
+    div.aside_banner_box{
+      display: none;//需要JS控制显示;
+      min-width: 795px;
+      position: absolute;
+      top: 0;
+      left: 234px;
+      background: #ffffff;
+      border-top:1px solid #E0E0E0;
+      box-shadow: 0 2px 2px 2px rgba(0,0,0, 0.1);
+      ul.banner_box_content{
+        height: 459px;
+        float: left;
+        >li{
+          >a{
+            display: block;
+            width: 265px;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            padding: 18px 0;
+            img{vertical-align: middle;}
+            span{
+              display: inline-block;
+              width: 130px;
+              margin-left: 10px;
+              text-align: left;
+              &:hover{color: #FF6706;}
+            }
+          }
+        }
+      }
+    }
+    /*单列宽度*/
+    div.narrow_box{min-width: 265px;}
+  }
+}
+}
+/*产品推送样式*/
+#push_service{
+  width: 1226px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top:14px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  /*左侧内容样式*/
+  ul.mi_left{
+    float:left;
+    width: 234px;
+    height: 170px;
+    padding: 3px 3px;
+    box-sizing: border-box;
+    background: #5F5750;
+    li{
+      float: left;
+      width: 75px;
+      height: 82px;
+      padding: 0 3px;
+      text-align: center;
+      box-sizing: border-box;
+      i{
+        display: block;
+        width: 22px;
+        height: 26px;
+        margin:20px 0  0  22px;
+        cursor: pointer;
+        background: url("../image/iconlist_mi.png") no-repeat;
+      }
+    }
+    li:nth-child(1){>i{background-position:-70px -31px;}}
+    li:nth-child(1):hover{>i{background-position:-18px -30px;}}
+    li:nth-child(2){>i{background-position:-124px -31px;}}
+    li:nth-child(2):hover{>i{background-position:-181px -31px;}}
+    li:nth-child(3){>i{background-position:-249px -31px;}}
+    li:nth-child(3):hover{>i{background-position:-322px -31px;}}
+    li:nth-child(4){>i{background-position:-437px -33px;}}
+    li:nth-child(4):hover{>i{background-position:-382px -33px;}}
+    li:nth-child(5){>i{background-position:-11px -90px;}}
+    li:nth-child(5):hover{>i{background-position:-69px -90px;}}
+    li:nth-child(6){>i{background-position:-121px -88px;}}
+    li:nth-child(6):hover{>i{background-position:-182px -88px;}}
+    li:hover{a{color: #ffffff;}}
+    .border_right{border-right:1px solid #665E57;}
+    .border_bottom{border-bottom:1px solid #665E57;}
+  }
+  /*右侧内容样式*/
+  ul.mi_right{
+    float: right;
+    overflow: hidden;
+    li{
+      float: left;
+      margin-left: 14px;
+      a{display: block;}
+    }
+  }
+}
+/*小米明星单品样式*/
+#mi_star{
+  width: 1226px;
+  padding-bottom: 40px;
+  margin:0 auto;
+  overflow: hidden;
+  h1{
+    font-weight: normal;
+    margin-bottom: 20px;
+    span{font-size: 22px;}
+    a{
+      float: right;
+      width:24px;
+      height:16px;
+      vertical-align: middle;
+      margin-left: 1px;
+      padding: 3px 5px;
+      border: 1px solid #dddddd;
+      background: url(../image/iconlist_mi.png) no-repeat;
+    }
+    a.star_prev{
+      background-position:right 2px  bottom -237px;
+      &:hover{background-position:right  2px  bottom -264px;}
+    }
+    a.star_next{
+      background-position:right  -30px  bottom -237px;
+      &:hover{background-position:right -30px  bottom -264px;}
+    }
+    .star_prev_disabled{background-position:right 2px  bottom -211px;}
+    .star_next_disabled{background-position:right -31px  bottom -211px;}
+  }
+  .border_color_red{ border-top: 1px solid #FFAC13;}
+  .border_color_green{ border-top: 1px solid #83C44E;}
+  .border_color_blue{ border-top: 1px solid #2196F3;}
+  .border_color_cyan{ border-top: 1px solid #00C0A5;}
+  ul.product{
+    position: relative;
+    left: 0;
+    width: 2480px;
+    height: 340px;
+    li{
+      height: 300px;
+      width: 234px;
+      text-align: center;
+      float: left;
+      left: 0px;
+      margin-right: 14px;
+      background: #fafafa;
+      padding-top: 39px;
+      a{ display:block;}
+      h3{margin: 25px 0 5px 0;
+        a{
+          color: #000000;
+          font-weight: normal;
+        }
+      }
+      p:first-of-type{
+        color: #b0b0b0;
+        margin-bottom: 15px;
+      }
+      p:last-of-type{color:#ff6700;}
+    }
+  }
+}
+/*section主体内容样式*/
+#main_content{
+  width: 100%;
+  overflow: hidden;
+  padding-top: 60px;
+  background: #F5F5F5;
+  /*标签样式*/
+  .tab{
+    width: 64px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 36%;
+  }
+  .tab_new{ background: #83C44E;}
+  .tab_nineoff{background: #E53935;}
+  .tab_twopost{background: #FFAC13;}
+  /*主体内容样式*/
+  div{
+    max-width: 1226px;
+    margin:0 auto;
+    /*智能硬件、搭配样式、配件样式、周边样式、为您推荐、热评产品、内容、视频中的标签的相同的样式*/
+    .li_relative{
+      float: left;
+      margin:0  14px 14px 0;
+      text-align: center;
+      position: relative;
+      background: #ffffff;
+      transition:all 0.2s linear;
+    }
+    .h1_font{
+      font-size: 22px;
+      font-weight: normal;
+      line-height: 58px;
+      overflow: visible;
+    }
+    /*智能硬件样式*/
+    .noopsyche_hardware{
+      margin-bottom: 20px;
+      h1{width: 100%;
+        a{
+          float: right;
+          font-size: 16px;
+          color: #333;
+          b{
+            display: inline-block;
+            width:20px;
+            height: 20px;
+            margin-left: 8px;
+            border-radius: 10px;
+            line-height: 12px;
+            vertical-align:-4px;
+            background: url("../image/iconlist_mi.png");
+            background-position: -8px  -239px;
+          }
+          }
+        a:hover{
+          color:#ff6700;
+          b{background-position: -68px -239px;}
+        }
+      }
+      >a{
+        img{vertical-align: text-bottom;}
+        position: relative;
+        transition:all 0.2s linear;
+        &:hover{
+          top:-5px;
+          box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+        }
+      }
+      /*智能硬件右侧商品列表样式*/
+      .product_right{
+        float: right;
+        max-width:992px;
+        overflow: visible;
+        li{
+          height: 260px;
+          width:234px;
+          margin: 0 0 14px 14px;
+          padding:20px 0;
+          &:hover{
+            top:-5px;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+          h3{
+            font-weight: normal;
+            a{color: #333;}
+          }
+          p{
+            height: 18px;
+            color:#b0b0b0;
+            line-height: 18px;
+            margin: 5px 10px 10px 10px;
+          }
+          p:last-child{
+            font-size: 14px;
+            color: #ff6700;
+          }
+        }
+      }
+    }
+    /*搭配样式、配件样式、周边样式*/
+    .match_product{
+      margin-bottom: 20px;
+      height: 672px;
+      position: relative;
+      h1{
+        width: 100%;
+        color:#333;
+        /*右上链接菜单样式*/
+        ul{
+          float: right;
+          li{
+            float: left;
+            margin-left:30px;
+            a{
+              color: #333;
+              font-size: 16px;
+              font-weight: normal;
+              padding-bottom: 2px;
+              &:hover{
+                color: #ff6700;
+                border-bottom: 2px solid #ff6700;
+              }
+            }
+            a.a_active{
+              background: #F5F5F5;
+              color: #ff6700;
+              border-bottom: 2px solid #ff6700;
+            }
+          }
+        }
+      }
+      ul.product_left{
+        float:left;
+        width:234px;
+        margin-top: 2px;
+        overflow: visible;
+        li{
+          margin-bottom: 14px;
+          position: relative;
+          transition:all 0.2s linear;
+          a{img{vertical-align: bottom;}}
+          &:hover{
+            top:-5px;
+            box-shadow: 0 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+        }
+      }
+      /*右侧商品列表样式*/
+      ul.product_right{
+        opacity: 0;
+        float: right;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        max-width: 992px;
+        li.last{
+          height: 93px;
+          padding: 0;
+          padding-top: 50px;
+          >a{
+            img{
+              position:absolute;
+              top: 32px;
+              right: 20px;
+            }
+            b{
+              position: absolute;
+              top: 40px;
+              right: 35px;
+              display: inline-block;
+              width: 48px;
+              height: 48px;
+              background: url("../image/iconlist_mi.png");
+              background-position: -130px  -225px;
+            }
+          }
+          h3{
+            position: absolute;
+            top: 40px;
+            left: 30px;
+          }
+          p{
+            position: absolute;
+            top: 66px;
+            left: 22px;
+          }
+        }
+        li{
+          height: 260px;
+          width: 234px;
+          margin: 0   0  14px 14px;
+          padding: 20px 0;
+          overflow: hidden;
+          position: relative;
+          &:hover{
+            top:-5px;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+          h3{
+            margin-top: 10px;
+            font-weight: normal;
+            a{color: #333;}
+          }
+          p{
+            height: 18px;
+            color:#ff6700;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 5px 10px 10px 10px;
+          }
+          p:last-child{color: #b0b0b0;}
+          /*遮罩层样式*/
+          .fuzzy_storey{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 234px;
+            height: 0;
+            font-size: 12px;
+            opacity: 0;
+            background: #FF6701;
+            transition-property: height,opacity;
+            transition-duration:0.2s;
+            transition-timing-function: linear;
+            h6{
+              font-weight: normal;
+              padding: 10px 20px;
+              text-align: left;
+              cursor: pointer;
+              color: #ffffff;
+            }
+            span{
+              display: block;
+              padding: 0 20px;
+              text-align: left;
+              cursor: pointer;
+              color: #FFB482;
+            }
+          }
+          &:hover{
+            .fuzzy_storey{
+              opacity: 1;
+              height: 95px;
+            }
+          }
+        }
+      }
+      /*公共样式*/
+      ul.current_active{
+        opacity: 1;
+        z-index:10;
+      }
+    }
+    /*为您推荐样式*/
+    .recommend_product{
+      width:1226px;
+      padding: 0;
+      margin:14px  0  20px  0;
+      overflow: hidden;
+      h1{
+        a{
+          float: right;
+          width:24px;
+          height:16px;
+          margin-left: 1px;
+          padding: 3px 5px;
+          border: 1px solid #dddddd;
+          margin-top: 16px;
+          background: url("../image/iconlist_mi.png") no-repeat;
+        }
+        a.recommend_prev{
+          background-position:right 2px  bottom -237px;
+          &:hover{background-position:right  2px  bottom -264px;}
+        }
+        a.recommend_next{
+          background-position:right  -30px  bottom -237px;
+          &:hover{background-position:right -30px  bottom -264px;}
+        }
+        .recommend_prev_disabled{background-position:right 2px  bottom -211px;}
+        .recommend_next_disabled{background-position:right  -31px  bottom -211px;}
+      }
+      /*推荐商品列表样式*/
+      ul{
+        position: relative;
+        left: 0;
+        width: 4960px;
+        height: 300px;
+        overflow: visible;
+        li{
+          width: 234px;
+          height: 300px;
+          &:hover{
+            top:-5px;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+          dl{padding: 0 20px;
+            dt{padding:40px 0 15px 0;}
+            dd{
+              margin-bottom: 10px;
+              font-size: 14px;
+              a{color:#333333;}
+            }
+            dd.price{color: #ff6700;}
+            dd.evaluate{color: #757575;}
+          }
+        }
+      }
+    }
+    /*热评产品样式*/
+    .hot_evaluate{
+      width: 1226px;
+      margin-bottom: 20px;
+      ul{
+        height: 415px;
+        overflow: visible;
+        li{width: 296px;
+          &:hover{
+            top:-5px;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+          >a{
+            display: block;
+            margin-bottom:30px;
+          }
+          >p{
+            height: 72px;
+            margin:0 28px 22px;
+            line-height: 24px;
+            a{
+              font-size: 14px;
+              color: #333333;
+            }
+          }
+          div{
+            padding: 0px 28px 0;
+            p{margin-bottom:15px;}
+            p:first-child{color: #bbbbbb;}
+            p:last-child{
+              font-size: 14px;
+              a{
+                color: #333333;
+                padding-right: 8px;
+                border-right: 1px solid #aaaaaa;
+              }
+              span{
+                color: #ff6700;
+                padding-left: 8px;
+              }
+            }
+          }
+        }
+        li:last-child{margin: 0  0 14px 0;}
+      }
+    }
+    /*内容样式*/
+    .link_content{margin-bottom: 20px;
+      ul{
+        max-width: 1226px;
+        height: 420px;
+        overflow: visible;
+        li{
+          width: 296px;
+          height: 374px;
+          padding-top: 45px;
+          border-top: 1px solid #FFAC13;
+          &:hover{
+            top:-5px;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+          div{
+            h2{
+              font-size: 16px;
+              font-weight: normal;
+              color: #ffac13;
+              margin-bottom: 20px;
+            }
+            h1{
+              font-size: 20px;
+              font-weight: normal;
+              line-height: 34px;
+              a{color: #333333;}
+            }
+            p{margin: 0 48px 10px;
+              a{color: #b0b0b0;}
+            }
+            >a{
+              color:#333333;
+              font-size: 14px;
+            }
+          }
+          >a{
+            display: block;
+            height: 156px;
+            margin-top: 10px;
+          }
+          /*页面跳转按钮样式*/
+          div.page_list{
+            display:block;
+            position: absolute;
+            bottom: 15px;
+            height: 30px;
+            width: 296px;
+            >a:nth-child(1){top: 10px;left:75px;}
+            >a:nth-child(2){top: 10px;left:117px;}
+            >a:nth-child(3){top: 10px;left:159px;}
+            >a:nth-child(4){top: 10px;left:201px;}
+            a{
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              border: 2px solid #f5f5f5;
+              border-radius: 6px;
+              background: #b0b0b0;
+              &:hover{
+                border-color: #ff6700;
+                background: transparent;
+              }
+            }
+            >a.a_active{
+                border-color: #ff6700;
+                background: transparent;
+            }
+          }
+          /*左右侧箭头样式*/
+          >span{
+            width: 20px;
+            height:24px;
+            padding: 12px 0;
+            position: absolute;
+            top:44%;
+            opacity: 0;
+            cursor: pointer;
+            background: url("../image/iconlist_mi.png") no-repeat;
+          }
+          span.content_prev{
+            left: 0;
+            background-position: -11px -284px;
+          }
+          span.content_next{
+            right: 0;
+            background-position: -67px -284px;
+          }
+        }
+        li:last-child{margin: 0  0 14px 0;}
+        /*整个li鼠标移入后的透明度*/
+        li:hover span{
+          opacity: 0.5;
+          &:hover{opacity: 1;}
+        }
+        li:nth-child(2){border-top-color: #83C44E;
+          h2{color: #83C44E;}
+        }
+        li:nth-child(3){border-top-color: #E53935;
+          h2{color: #E53935;}
+        }
+        li:nth-child(4){border-top-color: #2196F3;
+          h2{color: #2196F3;}
+        }
+      }
+    }
+    /*视频样式*/
+    .link_video{
+      width: 1226px;
+      margin-bottom: 60px;
+      ul{
+        height: 285px;
+        overflow: visible;
+        li{
+          width: 296px;
+          height: 285px;
+          &:hover{
+            top:-5px;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0, 0.1);
+          }
+          a{
+            display: block;
+            margin-bottom: 30px;
+            position: relative;
+            span{
+              position: absolute;
+              top:148px;
+              left:20px;
+              width: 32px;
+              height: 20px;
+              box-sizing: border-box;
+              padding: 2px 0  0  8px;
+              border: 2px solid #ffffff;
+              background: #5C5D50;
+              border-radius: 12px;
+              div{
+                width: 0px;
+                height: 0px;
+                line-height: 20px;
+                border: 6px solid transparent;
+                border-left-color: #ffffff;
+              }
+              &:hover{
+                background: #ff6700;
+                border-color: #ff6700;
+              }
+            }
+          }
+          h3{
+            a{
+              font-size: 14px;
+              color: #333;
+              font-weight: normal;
+              margin-bottom: 6px;
+              &:hover{color:#ff6700;}
+            }
+          }
+          p{color: #b0b0b0;}
+        }
+        li:last-child{margin: 0 0 14px 0;}
+      }
+    }
+  }
+}
+/*页脚帮助中心样式*/
+#mi_help{
+  background:#ffffff;
+  width: 1226px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  /* 服务中心 */
+  .help_service{
+    float: left;
+    width:100%;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+    li{
+      float: left;
+      width: 19.8%;
+      line-height: 25px;
+      text-align: center;
+      font-size: 16px;
+      border-left: 1px solid #e0e0e0;
+      a{color:#333;
+        b{
+          display: inline-block;
+          padding: 23px 0  0 23px;
+          vertical-align:-5px;
+          background: url("../image/iconlist_mi.png");
+        }
+        &:hover{color:#ff6700;}
+      }
+    }
+    li:first-child{border: none;}
+    li:nth-child(1) a b{background-position:-406px -175px;}
+    li:nth-child(1) a:hover b{background-position:-467px -175px;}
+    li:nth-child(2) a b{background-position:-456px -128px;}
+    li:nth-child(2) a:hover b{background-position:-408px -128px;}
+    li:nth-child(3) a b{background-position:-303px -174px;}
+    li:nth-child(3) a:hover b{background-position:-352px -174px;}
+    li:nth-child(4) a b{background-position:-379px -93px;}
+    li:nth-child(4) a:hover b{background-position:-436px -93px;}
+    li:nth-child(5) a b{background-position:-365px -129px;}
+    li:nth-child(5) a:hover b{background-position:-326px -129px;}
+  }
+  /* 服务连接 */
+  .help_links{
+    width: 100%;
+    float: left;
+    padding: 40px 0  40px 0;
+    ul{
+      float: left;
+      width: 160px;
+      height: 123px;
+      box-sizing: border-box;
+      li h4{
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      li:not(:first-child){
+        margin-top: 13px;
+        a{
+          color: #757575;
+          &:hover{color: #ff6700;}
+        }
+      }
+    }
+    /* 服务热线 */
+    .service_hot{
+      float: right;
+      width: 251px;
+      height: 113px;
+      text-align: center;
+      border-left: 1px solid #e0e0e0;
+      p:first-child{
+        font-size: 22px;
+        color: #ff6700;
+        margin: 0  0  5px 0;
+      }
+      a{
+        display: inline-block;
+        margin-top:16px;
+        width: 118px;
+        line-height: 28px;
+        border: 1px solid #ff6700;
+        color: #ff6700;
+        b{
+          display: inline-block;
+          width: 17px;
+          height: 16px;
+          line-height: 28px;
+          vertical-align: -3px;
+          background: url(../image/iconlist_mi.png);
+          background-position: right -316px  top -239px;
+        }
+        &:hover{
+          color:#ffffff;
+          background: #ff6700;
+          b{background-position:right 146px  top -239px;}
+        }
+      }
+    }
+  }
+}
+/* 页脚版权样式 */
+#copyright{
+  width: 100%;
+  overflow: hidden;
+  background:#FAFAFA;
+  div.info_txt{
+    width: 1226px;
+    margin: 0 auto;
+    padding: 30px  0;
+    overflow: hidden;
+    >a{float: left;margin-right: 10px;}
+    >div{float: left;
+      p{margin-bottom: 5px;
+        a{
+          font-size: 14px;
+          color: #757575;
+          &:hover{color:#ff6700;}
+        }
+        span{margin:0 3px;}
+      }
+      p:last-of-type{
+        font-size:14px;
+        color: #b0b0b0;
+      }
+    }
+    >p{text-align: right;
+      a{margin-left: 8px;}
+    }
+  }
+  div.info_theme{
+    width: 1226px;
+    margin: 10px auto;
+    text-align: center;
+    font-size:18px;
+    color: #CDCDCD;
+  }
+}

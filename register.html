@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        nav>ul>li>b{
+            line-height: 80px;
+        }
+        .container>.form-control{
+            display: inline-block;
+        }
+        #ver{
+            position: relative;
+        }
+        #c1{
+            position: absolute;
+            left: 196px;
+
+        }
+        #login_2{
+            width:auto;
+            position: absolute;
+            left:35%;
+            top: 20%;
+            background-color:#f7f7f7;
+        }
+        ul{
+            list-style: none;
+        }
+        ul>li>a>img{
+            margin-left: 80px;
+        }
+        #login_3 .form-control{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="login_2">
+    <ul>
+        <li><a href="#"><img src="image/logo.png"></a></li>
+        <li style="font-size: 35px"><b>注册小米账号</b></li>
+    </ul>
+    <br>
+    <form action="data/login.php" id="login_3">
+    <label for="user_name">用户名:</label>
+    <input type="text" class="form-control " placeholder="请输入姓名"  style="width: 250px" name="user_name" id="user_name">
+    <br><br>
+    <label for="user_pwd">密　码:</label>
+    <input type="password" class="form-control " placeholder="请输入密码"  style="width: 250px" name="user_pwd" id="user_pwd">
+    <br><br>
+    <label for="phone">手机号:</label>
+    <input type="phone" class="form-control " placeholder="请输入手机号码"  style="width: 250px" name="user_phone" id="phone" pattern="13[0-9]\d{8}">
+    <br><br>
+    <label for="ver">验证码:</label>
+    <input type="text" class="form-control" style="width: 120px" placeholder="请输入验证码" name="user_ver" id="ver">
+    <canvas id="c1" width="120" height="35"></canvas>
+    <br><br>
+    <input type="submit" class="btn" style="width: 300px;background:#FF6709;color:#fff" value="立即注册">
+    </form>
+</div>
+<script src="js/login.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+</body>
+</HTML>

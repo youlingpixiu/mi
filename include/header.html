@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default navbar-inverse">
+	<div class="container">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mitu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">小米网</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="mitu">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">小米网</a></li>							
+					<li><a href="#">公众号</a></li>
+					<li><a target="_blank" href="https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954">头条号</a></li>
+					<li><a target="_blank" href="http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=">搜狐号</a></li>
+					<li><a target="_blank" href="https://baijiahao.baidu.com/u?app_id=1554935737577733">百家号</a></li>
+					<li><a target="_blank" href="#">大鱼号</a></li>
+					<li><a target="_blank" href="http://dy.163.com/v2/article/detail/CKH07K280525DQI6.html">网易号</a></li>
+					<li><a target="_blank" href="http://sundongyang1221.lofter.com/">LOFTER</a></li>
+					<li><a target="_blank" href="#">Select Region</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a target="_blank" href="login.html" id="welcome">登录</a></li>
+					<li><a target="_blank" href="register.html">注册</a></li>
+					<li class="top_shopping">
+						<a href="#"><i></i>购物车（<span>0</span>）
+							<div class="shopping_box">
+								<img ng-src="image/loading.gif"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</div>
+</nav>
+<script>
+	//localStorage.clear();
+	//sessionStorage
+	if(sessionStorage.length!==0){
+//	alert(sessionStorage.getItem("uname"));
+	$("#welcome").html(sessionStorage.getItem("uname"));
+	}
+</script>
