@@ -15,7 +15,7 @@
                 footer = document.querySelector('footer');
 
             report.innerHTML = footer.innerHTML =  '';
-            tip.innerHTML = '<p>正在生成和上传..</p> <small class="text-muted">演示使用了大量内存，可能会造成几秒内卡顿，不代表真实表现，请亲测。</small>';
+            tip.innerHTML = '<p>正在生成和上传..</p> <small class="text-muted">演示</small>';
             demo_report('原始图片', results.blob, results.origin.size);
 
             setTimeout(function () {
@@ -38,7 +38,7 @@
                             ? alert('服务端错误，未能保存图片')
                             : demo_report('服务端实存的图片', result.src, result.size);
 
-                        tip.innerHTML = '<p>生成和上传完毕</p> <small class="text-muted">演示使用了大量内存，可能会造成几秒内卡顿，不代表真实表现，请亲测。</small>';
+                        tip.innerHTML = '<p>生成和上传完毕</p> <small class="text-muted">演示</small>';
                     }
                 };
 
