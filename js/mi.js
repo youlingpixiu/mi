@@ -1,5 +1,5 @@
 /*异步加载页头页脚*/
-$("#top").load("include/header.html");
+// $("#top").load("include/header.html");
 $("#page_footer").load("include/footer.html");
 $(window).load(function(){
     /*top购物车鼠标移入功能*/

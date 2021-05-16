@@ -15,32 +15,40 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="mitu">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a target="_blank" href="https://www.mi.com/">小米网</a></li>
-					<li><a href="#">公众号</a></li>
-					<li><a target="_blank" href="https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954">头条号</a></li>
-					<li><a target="_blank" href="http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=">搜狐号</a></li>
-					<li><a target="_blank" href="https://baijiahao.baidu.com/u?app_id=1554935737577733">百家号</a></li>
-					<li><a target="_blank" href="http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91">大鱼号</a></li>
-					<li><a target="_blank" href="https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp">网易号</a></li>
-					<li><a target="_blank" href="http://sundongyang1221.lofter.com/">LOFTER</a></li>
-					<li><a target="_blank" href="#">本地上传</a></li>
+<!--					<li><a target="_blank" href="https://www.mi.com/">小米网</a></li>-->
+<!--					<li><a href="#">公众号</a></li>-->
+<!--					<li><a target="_blank" href="https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954">头条号</a></li>-->
+<!--					<li><a target="_blank" href="http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=">搜狐号</a></li>-->
+<!--					<li><a target="_blank" href="https://baijiahao.baidu.com/u?app_id=1554935737577733">百家号</a></li>-->
+<!--					<li><a target="_blank" href="http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91">大鱼号</a></li>-->
+<!--					<li><a target="_blank" href="https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp">网易号</a></li>-->
+<!--					<li><a target="_blank" href="http://sundongyang1221.lofter.com/">LOFTER</a></li>-->
+<!--					<li><a target="_blank" href="#">本地上传</a></li>-->
+
+
+					<li class="liClick" id="baijia">百家号</li>
+					<li class="liClick" id="toutiao">今日头条</li>
+					<li class="liClick" id="dayu">大鱼号</li>
+					<li class="liClick" id="wangyi">网易号</li>
+					<li class="liClick" id="lofter">Lofter</li>
+					<li class="liClick" id="souhu">搜狐</li>
+					<li class="liClick" id="wx">公众号</li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a target="_blank" href="https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954" id="welcome">登录</a></li>
-					<li><a target="_blank" href="register.html">注册</a></li>
-					<li class="top_shopping">
-						<a href="#"><i></i>购物车（<span>0</span>）
-							<div class="shopping_box">
-								<img ng-src="image/loading.gif"/>
-							</div>
-						</a>
-					</li>
-				</ul>
+
+
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</div>
 </nav>
 <script>
+
+	$('.liClick').onclick = function(e){
+		console.log(e)
+	}
+
+	$('.liClick').click(function (e) {
+	console.log(e.target.id,'------------')
+	})
 	//localStorage.clear();
 	//sessionStorage
 	if(sessionStorage.length!==0){
