@@ -1,92 +1,124 @@
+<!--
+ * @Copyright: 
+ * @Descripttion: 页面描述
+ * @Author: Sun Dongyang
+ * @Date: 2022-05-18 14:17:23
+ * @LastEditors: Sun Dongyang
+ * @LastEditTime: 2022-05-18 16:13:37
+-->
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
-    <meta charset="utf-8"/>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>迷人的小狐狸</title>
-    <link rel="icon" href="image/favicon.ico"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/mi.css"/>
-    <!--[if lt IE 9]-->
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <title>迷人的小狐狸</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/mi.css" />
+  <!--[if lt IE 9]-->
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mitu">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" target="_blank" href="https://www.mi.com/">小米网</a>
-        </div>
-        <div class="collapse navbar-collapse" id="mitu">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="liClick" id="baijia">百家号</li>
-                <li class="liClick" id="toutiao">今日头条</li>
-                <li class="liClick" id="dayu">大鱼号</li>
-                <!--					<li class="liClick" id="wangyi">网易号</li>-->
-                <li class="liClick" id="souhu">搜狐</li>
-                <li class="liClick" id="wx">公众号</li>
-            </ul>
-        </div>
+      <div class="navbar-header">
+          迷人的小狐狸
+      </div>
+      <div class="collapse navbar-collapse" id="mitu">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="liClick" id="baijia">百家号</li>
+          <li class="liClick" id="toutiao">今日头条</li>
+          <li class="liClick" id="dayu">大鱼号</li>
+          <!--					<li class="liClick" id="wangyi">网易号</li>-->
+          <li class="liClick" id="souhu">搜狐</li>
+          <li class="liClick" id="wx">公众号</li>
+        </ul>
+      </div>
     </div>
     <!-- 导航菜单栏 -->
     <nav>
-        <iframe src="" id="frame" name="iframeName" frameborder="0" style="height: 100%;width: 100%;"></iframe>
+      <iframe src="" id="frame" name="iframeName" frameborder="0" style="height: 100%;width: 100%;"></iframe>
     </nav>
     <!-- 主体内容 section -->
-    <div id="page_footer">
-    </div>
-</div>
+    <div id="page_footer"></div>
+  </div>
 </body>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/angular.js"></script>
 <script rel="text/javascript" src="js/mi.js"></script>
 <script>
-    var obj = {
-        'souhu': 'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
-        'toutiao': 'https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954',
-        'baijia': 'https://baijiahao.baidu.com/u?app_id=1554935737577733',
-        'dayu': 'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
-        'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
-        // 'lofter':'http://sundongyang1221.lofter'
-    }
-    $('#frame').attr('src', obj['baijia'])
-    $('.liClick').click(function (e) {
-        var id = e.target.id;
-        $('#frame').attr('src', obj[id])
-    })
+  var obj = {
+    'souhu': 'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
+    'toutiao': 'https://www.toutiao.com/c/user/token/MS4wLjABAAAAXFN-bM8Ab6uHt3YuJOPHb4z0SSJbPIiI9BFkN-yRSP8',
+    'baijia': 'https://baijiahao.baidu.com/u?app_id=1554935737577733',
+    'dayu': 'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
+    'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
+    // 'lofter':'http://sundongyang1221.lofter'
+  }
+  $('#frame').attr('src', obj['baijia'])
+  $('.liClick').click(function (e) {
+      let liClass = document.getElementsByClassName('liClick');
+      for(let i=0;i<liClass.length;i++){
+          liClass[i].className = "liClick"
+      }
+      e.target.className = "liClick active"
+    // e.target.setAttribute('className','active')
+    var id = e.target.id;
+    $('#frame').attr('src', obj[id])
+  })
 </script>
 <style>
-    #id {
-        height: 100%;
-        width: 100%;
-    }
+  html,
+  body,
+  .container {
+    height: 100%;
+    width: 100%;
+  }
 
-    html, body, .container {
-        height: 100%;
-        width: 100%;
-    }
+  body {
+    background: url("./image/bg_body.png") no-repeat;
+    background-size: 100% 100%;
+  }
 
-    #page_footer {
-        height: 300px;
-    }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-    nav {
-        height: calc(100% - 350px);
-        min-height: 500px;
-    }
+  #page_footer {
+    height: 100px;
+  }
 
-    li {
-        line-height: 50px;
-        height: 50px;
-        margin: 0 10px;
-        cursor: pointer;
-    }
+  nav {
+    height: calc(100% - 160px);
+    min-height: 200px;
+  }
+
+  li {
+    line-height: 50px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
 </style>
+<style lang="scss" scoped>
+    .navbar-header{
+        color:#fff;
+        line-height: 50px;
+        font-size: 20px;
+        font-family: cursive;
+    }
+  .navbar-collapse {
+    color: #fff;
+      font-family: cursive;
+      font-size:15px;
+  }
+
+  li.active {
+    border-bottom: 3px solid #22adff;
+  }
+</style>
+
 </html>

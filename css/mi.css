@@ -1342,13 +1342,19 @@ nav #nav_menue .menue_right .hot_words a:hover {
 #copyright {
   width: 100%;
   overflow: hidden;
-  background: #FAFAFA;
+  height: 100px;
+  line-height: 100px;
+  font-size: 25px;
+  color: #ffff;
+  text-align: center;
+  background: none;
 }
 #copyright div.info_txt {
   width: 1226px;
   margin: 0 auto;
-  padding: 30px  0;
   overflow: hidden;
+  
+  font-family: cursive;
 }
 #copyright div.info_txt > a {
   float: left;
