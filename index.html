@@ -4,7 +4,7 @@
  * @Author: Sun Dongyang
  * @Date: 2022-05-18 14:17:23
  * @LastEditors: Sun Dongyang
- * @LastEditTime: 2022-05-18 16:13:37
+ * @LastEditTime: 2022-05-18 16:52:42
 -->
 <!DOCTYPE html>
 <html>
@@ -24,16 +24,17 @@
   <div class="container">
     <div class="container-fluid">
       <div class="navbar-header">
-          迷人的小狐狸
+        迷人的小狐狸
       </div>
       <div class="collapse navbar-collapse" id="mitu">
         <ul class="nav navbar-nav navbar-right">
+          <li class="liClick active" id="toutiao">今日头条</li>
           <li class="liClick" id="baijia">百家号</li>
-          <li class="liClick" id="toutiao">今日头条</li>
           <li class="liClick" id="dayu">大鱼号</li>
-          <!--					<li class="liClick" id="wangyi">网易号</li>-->
+          <li class="liClick" id="wangyi">网易号</li>
           <li class="liClick" id="souhu">搜狐</li>
           <li class="liClick" id="wx">公众号</li>
+          <li class="liClick" id="lofter">LOFTER</li>
         </ul>
       </div>
     </div>
@@ -51,22 +52,23 @@
 <script>
   var obj = {
     'souhu': 'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
-    'toutiao': 'https://www.toutiao.com/c/user/token/MS4wLjABAAAAXFN-bM8Ab6uHt3YuJOPHb4z0SSJbPIiI9BFkN-yRSP8',
+    'toutiao': 'https://www.toutiao.com/c/user/token/MS4wLjABAAAAXFN-bM8Ab6uHt3YuJOPHb4z0SSJbPIiI9BFkN-yRSP8/?source=author_home',
     'baijia': 'https://baijiahao.baidu.com/u?app_id=1554935737577733',
     'dayu': 'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
-    'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
-    // 'lofter':'http://sundongyang1221.lofter'
+    // 'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
+    'wangyi': 'https://c.m.163.com/news/sub/T1651799582797.html',
+    'wx': 'https://mp.weixin.qq.com/mp/homepage?__biz=MzUzOTcwMTY4Mw==&hid=1&sn=2a2a612e9eee113cf2ebc4cb7f972389&scene=18&devicetype=android-29&version=28001651&lang=zh_CN&nettype=WIFI&ascene=7&session_us=gh_aea18da86b7e&pass_ticket=FwJGk1q2H8e6ZfSIfqxROsos6BJg0vG%2BcPJIPvzB6gCdRls0bTWnFZJzpsJ%2FuZc2&wx_header=3',
+    'lofter':'http://sundongyang1221.lofter.com'
   }
-  $('#frame').attr('src', obj['baijia'])
+  $('#frame').attr('src', obj['toutiao'])
   $('.liClick').click(function (e) {
-      let liClass = document.getElementsByClassName('liClick');
-      for(let i=0;i<liClass.length;i++){
-          liClass[i].className = "liClick"
-      }
-      e.target.className = "liClick active"
-    // e.target.setAttribute('className','active')
+    let liClass = document.getElementsByClassName('liClick');
+    for (let i = 0; i < liClass.length; i++) {
+      liClass[i].className = "liClick";
+    }
+    e.target.className = "liClick active";
     var id = e.target.id;
-    $('#frame').attr('src', obj[id])
+    $('#frame').attr('src', obj[id]);
   })
 </script>
 <style>
@@ -94,6 +96,7 @@
   nav {
     height: calc(100% - 160px);
     min-height: 200px;
+    background: #ffff;
   }
 
   li {
@@ -104,16 +107,17 @@
   }
 </style>
 <style lang="scss" scoped>
-    .navbar-header{
-        color:#fff;
-        line-height: 50px;
-        font-size: 20px;
-        font-family: cursive;
-    }
+  .navbar-header {
+    color: #fff;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: cursive;
+  }
+
   .navbar-collapse {
     color: #fff;
-      font-family: cursive;
-      font-size:15px;
+    font-family: cursive;
+    font-size: 15px;
   }
 
   li.active {
