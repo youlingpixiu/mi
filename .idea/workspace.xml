@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="580e04c7-5a47-466d-a399-7bfc04c226dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/mi.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mi.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -39,7 +37,9 @@
       <updated>1621170901158</updated>
       <workItem from="1621170904058" duration="88000" />
       <workItem from="1621171007381" duration="2767000" />
-      <workItem from="1652854779698" duration="6000000" />
+      <workItem from="1652854779698" duration="6767000" />
+      <workItem from="1653637827586" duration="1079000" />
+      <workItem from="1654141071916" duration="55000" />
     </task>
     <servers />
   </component>
@@ -47,9 +47,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="164" key="SettingsEditor" timestamp="1621170991149">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1653638846806">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621170991149" />
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1653638846806" />
   </component>
 </project>
