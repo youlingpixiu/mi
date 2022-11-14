@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580e04c7-5a47-466d-a399-7bfc04c226dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mi.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mi.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mi.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mi.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mi.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +27,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ferry_web" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -38,17 +42,30 @@
       <option name="presentableId" value="Default" />
       <updated>1621170901158</updated>
       <workItem from="1621170904058" duration="88000" />
-      <workItem from="1621171007381" duration="2767000" />
+      <workItem from="1621171007381" duration="3040000" />
+      <workItem from="1621344459155" duration="1590000" />
+      <workItem from="1621521524622" duration="622000" />
+      <workItem from="1630225916555" duration="345000" />
+      <workItem from="1631113923340" duration="309000" />
+      <workItem from="1632538882650" duration="871000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1621521542662">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621521542662" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1621170991149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621170991149" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621345313819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1621345313819" />
   </component>
 </project>

@@ -1,125 +1,119 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
-		<meta charset="utf-8"/>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-		<title>迷人的小狐狸</title>
-		<link rel="icon" href="image/favicon.ico" />
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-			<link rel="stylesheet" href="css/mi.css"/>
-		<!--[if lt IE 9]-->
-		<script src="js/html5shiv.min.js"></script>
-		<script src="js/respond.min.js"></script>
-	</head>
-	<body>
-		<!-- 页面顶部菜单 -->
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>冬天的阳光</title>
+    <link rel="icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/mi.css"/>
+    <!--[if lt IE 9]-->
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+</head>
+<body>
+<!-- 页面顶部菜单 -->
 <!--		<header id="top">-->
 <!--			<div ng-include="'include/header.html'"></div>-->
 <!--		</header>-->
-		<div class="container">
+<div class="container">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mitu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" target="_blank" href="https://www.mi.com/">小米网</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mitu">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="liClick" id="baijia">百家号</li>
+                <li class="liClick" id="toutiao">今日头条</li>
+                <li class="liClick" id="dayu">大鱼号</li>
+                <li class="liClick" id="wangyi">网易号</li>
+                <li class="liClick" id="souhu">搜狐</li>
+                <li class="liClick" id="wx">公众号</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航菜单栏 -->
+    <nav>
+        <iframe src="" id="frame" name="iframeName" frameborder="0" style="height: 100%;width: 100%;"></iframe>
+    </nav>
+
+    <!-- 主体内容 section -->
+
+    <div id="page_footer">
+    </div>
+
+</div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/angular.js"></script>
+<script rel="text/javascript" src="js/mi.js"></script>
+<script>
+    var obj = {
+        'souhu': 'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
+        'toutiao': 'https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954',
+        'baijia': 'https://baijiahao.baidu.com/u?app_id=1554935737577733',
+        'dayu': 'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
+        'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
+        // 'lofter':'http://sundongyang1221.lofter'
+    }
+    $('#frame').attr('src', obj['baijia'])
+    $('.liClick').click(function (e) {
+        var id = e.target.id;
+        // $('#frame').attr('src','https://baijiahao.baidu.com/u?app_id=1554935737577733')
+        $('#frame').attr('src', obj[id])
 
 
+    })
 
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mitu">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" target="_blank" href="https://www.mi.com/">小米网</a>
-			</div>
-			<div class="collapse navbar-collapse" id="mitu">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="liClick" id="baijia">百家号</li>
-					<li class="liClick" id="toutiao">今日头条</li>
-					<li class="liClick" id="dayu">大鱼号</li>
-					<li class="liClick" id="wangyi">网易号</li>
-					<li class="liClick" id="souhu">搜狐</li>
-					<li class="liClick" id="wx">公众号</li>
-				</ul>
-			</div>
-		</div>
-		<!-- 导航菜单栏 -->
-		<nav>
-			<!-- 菜单栏 -->
-<!--			<div id="nav_menue">-->
-<!--				&lt;!&ndash; 左侧logo图片 &ndash;&gt;-->
-<!--				<div class="menue_left lf">-->
-<!--					<a href="#">-->
-<!--						<img src="image/logo.png"/>-->
-<!--						<img src="image/love_520.gif"/>-->
-<!--					</a>-->
-<!--				</div>-->
-<!--				&lt;!&ndash; 右侧菜单栏和导航栏&ndash;&gt;-->
-<!--				<div class="menue_right">-->
-<!--					<ul class="lf">-->
-<!--						<li class="drop_menue">-->
-<!--							<a target="_blank" href="sdy/src/demo/index.html">压缩上传</a>-->
-<!--							&lt;!&ndash; 小米手机 &ndash;&gt;							-->
-<!--						</li>-->
-<!--						-->
-<!--					</ul>										-->
-<!--				</div>-->
-<!--			</div>-->
+</script>
+<style lang="scss">
+    .container{
+        width:100%;
+    }
+    .container-fluid {
+        background-color: #222;
+        border-color: #080808;
+    }
+</style>
+<style>
+    #id {
+        height: 100%;
+        width: 100%;
+    }
 
+    html, body, .container {
+        height: 100%;
+        width: 100%;
+    }
 
-			<iframe src="" id="frame" name="iframeName" frameborder="0" style="height: 100%;width: 100%;"></iframe>
-		</nav>
-		
-		<!-- 主体内容 section -->
+    #page_footer {
+        height: 100px;
+    }
 
-		<div id="page_footer">
-		</div>
+    nav {
+        height: calc(100% - 150px);
+        min-height: 500px;
+    }
 
-		</div>
-	</body>
-	<script src="js/jquery-1.11.3.js"></script>
-	<script src="js/angular.js"></script>
-	<script rel="text/javascript" src="js/mi.js"></script>
-	<script>
-		var obj = {
-			'souhu':'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
-			'toutiao':'https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954',
-			'baijia':'https://baijiahao.baidu.com/u?app_id=1554935737577733',
-			'dayu':'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
-			'wangyi':'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
-			// 'lofter':'http://sundongyang1221.lofter'
-		}
-		$('#frame').attr('src',obj['baijia'])
-		$('.liClick').click(function (e) {
-			var id = e.target.id;
-			// $('#frame').attr('src','https://baijiahao.baidu.com/u?app_id=1554935737577733')
-			$('#frame').attr('src',obj[id])
+    .help_service {
+        width: 100%;
+        text-align: center;
+    }
 
-
-		})
-
-	</script>
-	<style>
-		#id{
-			height: 100%;
-			width: 100%;
-		}
-		html,body,.container{
-			height: 100%;
-			width: 100%;
-		}
-		#page_footer{
-			height: 300px;
-		}
-		nav{
-			height: calc(100% - 350px);
-			min-height: 500px;
-		}
-		li {
-			line-height: 50px;
-			height: 50px;
-			margin: 0 10px;
-			cursor: pointer;
-		}
-	</style>
+    .help_service li {
+        line-height: 50px;
+        height: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+        float: left;
+    }
+</style>
 </html>
