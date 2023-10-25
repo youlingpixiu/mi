@@ -1,119 +1,130 @@
+<!--
+ * @Copyright: 
+ * @Descripttion: 页面描述
+ * @Author: Sun Dongyang
+ * @Date: 2022-05-18 14:17:23
+ * @LastEditors: Sun Dongyang
+ * @LastEditTime: 2022-05-18 16:52:42
+-->
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
-    <meta charset="utf-8"/>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>冬天的阳光</title>
-    <link rel="icon" href="image/favicon.ico"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/mi.css"/>
-    <!--[if lt IE 9]-->
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
+  <meta charset="utf-8"/>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+  <title>迷人的小狐狸</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/mi.css"/>
+  <!--[if lt IE 9]-->
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
 </head>
+
 <body>
-<!-- 页面顶部菜单 -->
-<!--		<header id="top">-->
-<!--			<div ng-include="'include/header.html'"></div>-->
-<!--		</header>-->
 <div class="container">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mitu">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" target="_blank" href="https://www.mi.com/">小米网</a>
-        </div>
-        <div class="collapse navbar-collapse" id="mitu">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="liClick" id="baijia">百家号</li>
-                <li class="liClick" id="toutiao">今日头条</li>
-                <li class="liClick" id="dayu">大鱼号</li>
-                <li class="liClick" id="wangyi">网易号</li>
-                <li class="liClick" id="souhu">搜狐</li>
-                <li class="liClick" id="wx">公众号</li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      迷人的小狐狸
     </div>
-    <!-- 导航菜单栏 -->
-    <nav>
-        <iframe src="" id="frame" name="iframeName" frameborder="0" style="height: 100%;width: 100%;"></iframe>
-    </nav>
-
-    <!-- 主体内容 section -->
-
-    <div id="page_footer">
+    <div class="collapse navbar-collapse" id="mitu">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="liClick active" id="toutiao">今日头条</li>
+        <li class="liClick" id="baijia">百家号</li>
+        <li class="liClick" id="dayu">大鱼号</li>
+        <li class="liClick" id="wangyi">网易号</li>
+        <li class="liClick" id="souhu">搜狐</li>
+        <li class="liClick" id="wx">公众号</li>
+        <li class="liClick" id="lofter">LOFTER</li>
+        <li class="liClick" id="weibo">微博</li>
+      </ul>
     </div>
-
+  </div>
+  <!-- 导航菜单栏 -->
+  <nav>
+    <iframe src="" id="frame" name="iframeName" frameborder="0" style="height: 100%;width: 100%;"></iframe>
+  </nav>
+  <!-- 主体内容 section -->
+  <div id="page_footer"></div>
 </div>
 </body>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/angular.js"></script>
 <script rel="text/javascript" src="js/mi.js"></script>
 <script>
-    var obj = {
-        'souhu': 'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
-        'toutiao': 'https://www.toutiao.com/c/user/57903529207/#mid=1561906494077954',
-        'baijia': 'https://baijiahao.baidu.com/u?app_id=1554935737577733',
-        'dayu': 'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
-        'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
-        // 'lofter':'http://sundongyang1221.lofter'
+  var obj = {
+    'souhu': 'http://mp.sohu.com/profile?xpt=c3VuZG9uZ3lhbmcxMjIxQDE2My5jb20=',
+    'toutiao': 'https://www.toutiao.com/c/user/token/MS4wLjABAAAAXFN-bM8Ab6uHt3YuJOPHb4z0SSJbPIiI9BFkN-yRSP8/?source=author_home',
+    'baijia': 'https://baijiahao.baidu.com/u?app_id=1554935737577733',
+    'dayu': 'http://a.mp.uc.cn/media?uc_param_str=frdnsnpfvecpntnwprdssskt&mid=e915e95263554335831833a5dea22a91',
+    // 'wangyi': 'https://c.m.163.com/news/sub/T1489546857557.html?spss=newsapp',
+    'wangyi': 'https://c.m.163.com/news/sub/T1651799582797.html',
+    'wx': 'https://mp.weixin.qq.com/mp/homepage?__biz=MzUzOTcwMTY4Mw==&hid=1&sn=2a2a612e9eee113cf2ebc4cb7f972389&scene=18&devicetype=android-29&version=28001651&lang=zh_CN&nettype=WIFI&ascene=7&session_us=gh_aea18da86b7e&pass_ticket=FwJGk1q2H8e6ZfSIfqxROsos6BJg0vG%2BcPJIPvzB6gCdRls0bTWnFZJzpsJ%2FuZc2&wx_header=3',
+    'lofter': 'http://sundongyang1221.lofter.com',
+    'weibo': 'https://weibo.com/u/6487774418'
+  }
+  $('#frame').attr('src', obj['toutiao'])
+  $('.liClick').click(function (e) {
+    let liClass = document.getElementsByClassName('liClick');
+    for (let i = 0; i < liClass.length; i++) {
+      liClass[i].className = "liClick";
     }
-    $('#frame').attr('src', obj['baijia'])
-    $('.liClick').click(function (e) {
-        var id = e.target.id;
-        // $('#frame').attr('src','https://baijiahao.baidu.com/u?app_id=1554935737577733')
-        $('#frame').attr('src', obj[id])
-
-
-    })
-
+    e.target.className = "liClick active";
+    var id = e.target.id;
+    $('#frame').attr('src', obj[id]);
+  })
 </script>
-<style lang="scss">
-    .container{
-        width:100%;
-    }
-    .container-fluid {
-        background-color: #222;
-        border-color: #080808;
-    }
-</style>
 <style>
-    #id {
-        height: 100%;
-        width: 100%;
-    }
+  html,
+  body,
+  .container {
+    height: 100%;
+    width: 100%;
+  }
 
-    html, body, .container {
-        height: 100%;
-        width: 100%;
-    }
+  body {
+    background: url("./image/bg_body.png") no-repeat;
+    background-size: 100% 100%;
+  }
 
-    #page_footer {
-        height: 100px;
-    }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-    nav {
-        height: calc(100% - 150px);
-        min-height: 500px;
-    }
+  #page_footer {
+    height: 100px;
+  }
 
-    .help_service {
-        width: 100%;
-        text-align: center;
-    }
+  nav {
+    height: calc(100% - 160px);
+    min-height: 200px;
+    background: #ffff;
+  }
 
-    .help_service li {
-        line-height: 50px;
-        height: 50px;
-        margin: 0 10px;
-        cursor: pointer;
-        float: left;
-    }
+  li {
+    line-height: 50px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
 </style>
+<style lang="scss" scoped>
+  .navbar-header {
+    color: #fff;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: cursive;
+  }
+
+  .navbar-collapse {
+    color: #fff;
+    font-family: cursive;
+    font-size: 15px;
+  }
+
+  li.active {
+    border-bottom: 3px solid #22adff;
+  }
+</style>
+
 </html>
